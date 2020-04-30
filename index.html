@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Vanilla-js Map</title>
+  </head>
+
+  <body>
+    <div class="map-container">
+      <div class="global-data">
+        <!-- total cases -->
+        <div class="global-data--cases">
+          <h2>Total Cases:</h2>
+          <h1 id="global-cases">--</h1>
+        </div>
+        <!-- cases today -->
+        <div class="global-data--cases-today">
+          <p id="global-cases-today" class="data-today">--</p>
+        </div>
+        <hr />
+        <!-- total deaths -->
+        <div class="global-data--deaths">
+          <h2>Total Deaths:</h2>
+          <h1 id="global-deaths">--</h1>
+        </div>
+        <!-- deaths today -->
+        <div class="global-data--deaths-today">
+          <p id="global-deaths-today" class="data-today">--</p>
+        </div>
+        <!-- total recoveries -->
+        <hr />
+        <div class="global-data--recoveries">
+          <h2>Total Recoveries:</h2>
+          <h1 id="global-recoveries">--</h1>
+        </div>
+        <hr />
+        <div class="sorted-countries">
+          <h2>Cases Per Country:</h2>
+          <span id="sorted-countries-country"></span>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </div>
+    <!-- <script type="module" src="./js/sortedCountries.js"></script> -->
+    <script type="module" src="./src/globalData.js"></script>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
