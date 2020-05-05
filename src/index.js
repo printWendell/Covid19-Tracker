@@ -125,16 +125,12 @@ var map = L.map("mapid", {
   worldCopyJump: true,
 }).setView([30.751278, -32.613858], 2);
 
-L.tileLayer(
-  "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png",
-  {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: "mapbox/streets-v11",
-  }
-).addTo(map);
+//map layer
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  attribution:
+    '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+  subdomains: ["a", "b", "c"],
+}).addTo(map);
 
 getGlobalData();
 getSortedCountries();
