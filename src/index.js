@@ -59,24 +59,24 @@ const getSortedCountries = async () => {
       color: "#D51F1F",
       fillColor: "#ED7D70",
       radius:
-        countryCases > 100000
+        countryCases > 5000000
           ? 60
+          : countryCases > 1000000
+          ? 45
+          : countryCases > 500000
+          ? 30
+          : countryCases > 100000
+          ? 25
           : countryCases > 50000
-          ? 40
-          : countryCases > 20000
-          ? 20
-          : countryCases > 10000
           ? 15
-          : countryCases > 5000
+          : countryCases > 10000
           ? 10
-          : countryCases > 1000
-          ? 9
-          : countryCases > 500
+          : countryCases > 5000
           ? 8
-          : countryCases > 100
-          ? 7
-          : countryCases > 50
+          : countryCases > 1000
           ? 5
+          : countryCases > 500
+          ? 4
           : 3,
     });
     map.addLayer(marker);
